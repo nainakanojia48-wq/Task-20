@@ -89,3 +89,6 @@ EmailJS is used to send emails when:
 1. A user books a laundry service.
 2. A user subscribes to the newsletter.
 
+## AUTHOR
+Naina
+

@@ -1,0 +1,656 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f9ff;
+    color: #222;
+}
+
+
+/* Navbar */
+
+.navbar {
+    background-color: white;
+    min-height: 70px;
+    padding: 15px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    box-shadow: 0 2px 8px #ddd;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1677e8;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #1677e8;
+}
+
+.user-name {
+    font-weight: bold;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 550px;
+    padding: 70px 8%;
+
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    background-color: #eaf4ff;
+}
+
+.hero-left {
+    width: 50%;
+    animation: leftSide 1s ease;
+}
+
+.hero-left h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero-left h1 span {
+    color: #1677e8;
+}
+
+.hero-left p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.hero-left button {
+    padding: 13px 22px;
+    border: none;
+    border-radius: 6px;
+
+    background-color: #1677e8;
+    color: white;
+
+    font-size: 15px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.hero-left button:hover {
+    background-color: #075fbd;
+    transform: translateY(-3px);
+}
+
+.hero-right {
+    width: 50%;
+    animation: rightSide 1s ease;
+}
+
+.hero-right img {
+    width: 100%;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.hero-right img:hover {
+    transform: scale(1.02);
+}
+
+
+/* Hero Animation */
+
+@keyframes leftSide {
+
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes rightSide {
+
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* Achievements */
+
+.achievements {
+    width: 100%;
+    min-height: 170px;
+
+    padding: 30px 7%;
+
+    background-color: #1677e8;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    text-align: center;
+}
+
+.achievements h2 {
+    font-size: 36px;
+}
+
+.achievements p {
+    margin-top: 8px;
+}
+
+
+/* Service Section */
+
+.service-section {
+    padding: 70px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.service-container {
+    display: flex;
+    gap: 25px;
+    max-width: 1150px;
+    margin: auto;
+}
+
+
+/* Left side */
+
+.service-left {
+    width: 55%;
+
+    background-color: white;
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 12px #ddd;
+}
+
+.service-left h2 {
+    margin-bottom: 20px;
+}
+
+.service {
+    padding: 15px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.service-info p:first-child {
+    font-weight: bold;
+}
+
+.service-info p:last-child {
+    color: #1677e8;
+    margin-top: 5px;
+}
+
+.service-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.service-buttons button {
+    padding: 7px 9px;
+
+    border: none;
+    border-radius: 5px;
+
+    color: white;
+    cursor: pointer;
+}
+
+.add {
+    background-color: #1677e8;
+}
+
+.remove {
+    background-color: #e74c3c;
+}
+
+.service-buttons button:hover {
+    opacity: 0.8;
+}
+
+.cart-info {
+    margin-top: 20px;
+    text-align: center;
+    color: #777;
+}
+
+
+/* Right side */
+
+.service-right {
+    width: 45%;
+}
+
+.cart-box,
+.booking-box {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 12px #ddd;
+}
+
+.cart-box {
+    margin-bottom: 20px;
+}
+
+.cart-box h2,
+.booking-box h2 {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    padding: 10px 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #eee;
+}
+
+.empty {
+    color: #777;
+    padding: 10px 0;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 20px;
+    padding-top: 15px;
+
+    border-top: 2px solid #ddd;
+
+    font-size: 19px;
+    font-weight: bold;
+}
+
+
+/* Booking Form */
+
+.booking-box label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.booking-box input {
+    width: 100%;
+
+    padding: 12px;
+    margin-bottom: 3px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    font-size: 15px;
+}
+
+.booking-box input:focus {
+    outline: none;
+    border-color: #1677e8;
+}
+
+.booking-box p {
+    color: red;
+    font-size: 13px;
+    min-height: 18px;
+}
+
+.booking-box button {
+    width: 100%;
+
+    margin-top: 8px;
+
+    padding: 13px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #1677e8;
+    color: white;
+
+    font-size: 15px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.booking-box button:hover {
+    background-color: #075fbd;
+}
+
+#bookingMessage {
+    color: green;
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+/* Quality Section */
+
+.quality-section {
+    background-color: white;
+
+    padding: 70px 7%;
+
+    text-align: center;
+}
+
+.quality-section h2 {
+    font-size: 35px;
+}
+
+.quality-text {
+    color: #666;
+
+    max-width: 650px;
+
+    margin: 15px auto 35px;
+
+    line-height: 1.5;
+}
+
+.quality-container {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.quality-card {
+    width: 230px;
+
+    padding: 25px;
+
+    background-color: #f5f9ff;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.quality-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 5px 15px #ddd;
+}
+
+.quality-card h3 {
+    color: #1677e8;
+
+    margin-bottom: 10px;
+}
+
+.quality-card p {
+    color: #666;
+
+    line-height: 1.5;
+}
+
+
+/* Newsletter */
+
+.newsletter {
+    padding: 65px 7%;
+
+    background-color: #eaf4ff;
+
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.newsletter > p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.newsletter form {
+    max-width: 700px;
+
+    margin: auto;
+
+    display: flex;
+
+    gap: 10px;
+}
+
+.newsletter input {
+    flex: 1;
+
+    padding: 13px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+}
+
+.newsletter button {
+    padding: 13px 25px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #1677e8;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.newsletter button:hover {
+    background-color: #075fbd;
+}
+
+#newsletterMessage {
+    color: green;
+
+    margin-top: 15px;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #111820;
+
+    color: white;
+
+    padding-top: 50px;
+}
+
+.footer-container {
+    padding: 0 7% 40px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    min-width: 150px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.footer-column h2 {
+    color: #4d9cff;
+}
+
+.footer-column p {
+    color: #aaa;
+}
+
+.footer-column a {
+    color: #aaa;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+.copyright {
+    padding: 20px;
+
+    text-align: center;
+
+    border-top: 1px solid #333;
+
+    color: #888;
+}
+
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left,
+    .hero-right {
+        width: 100%;
+    }
+
+    .hero-left h1 {
+        font-size: 40px;
+    }
+
+    .service-container {
+        flex-direction: column;
+    }
+
+    .service-left,
+    .service-right {
+        width: 100%;
+    }
+
+    .achievements {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .hero-left h1 {
+        font-size: 32px;
+    }
+
+    .service {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+}
+
+

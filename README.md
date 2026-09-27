@@ -42,4 +42,5 @@ I created a responsive laundry service website using **HTML, CSS, and JavaScript
 
 That's it! The laundry service website is ready to use.
 
-
+AUTHOR
+Naina.
